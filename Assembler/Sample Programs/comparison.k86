@@ -1,0 +1,25 @@
+.data
+num1 -12
+num2 15
+result ?
+
+.code
+LOADM R1, num1      # Loads num1 into R1
+
+LOADM R2, num2      # Loads num2 into R2
+
+CMP R1, R2          # Compare R1 with R2
+
+JGT GREATER         # Jump to GREATER if R1 > R2
+LOADI R3, 0         # R3 = 0 (if R1 <= R2)
+JMP DONE            # Jump to DONE
+
+GREATER:
+LOADI R3, 1         # R3 = 1 (if R1 > R2)
+
+DONE:
+STORE R3, result    # Store R3 into memory[result]
+PRINT R3
+HALT                # Stop the program
+
+

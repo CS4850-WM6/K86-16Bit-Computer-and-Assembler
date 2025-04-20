@@ -1,0 +1,25 @@
+.data
+num_terms 10
+fib1 0
+fib2 1
+
+.code
+LOADM R1, num_terms # Load number of terms
+LOADM R2, fib1      # First Fibonacci number
+LOADM R3, fib2      # Second Fibonacci number
+
+PRINT R2            # Print first number
+PRINT R3            # Print second number
+
+FIB_LOOP:
+    SUBI R1, 1      # Decrease counter
+    JZ DONE         # If counter is 0, exit
+
+    ADD R2, R3      # R2 = R2 + R3 (next Fibonacci number)
+    PRINT R2        # Print new Fibonacci number
+
+    SWAP R2, R3     # Swap R2 and R3 to shift values
+    JMP FIB_LOOP    # Repeat loop
+
+DONE:
+    HALT
