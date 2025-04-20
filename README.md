@@ -22,9 +22,7 @@ To define the basic aspects of K86 architecture, we used x86 CISC and ARM RISC a
 KASM Assembler
 The KASM assembler is written in Python and can process K86 code with two main sections, .data, for declaring variable names and their values, and .code, where instructions and subprocesses are written. When a variable is declared in the .data section, its value is loaded into R0, it is assigned a memory address and is then stored into that address. Instructions in the .code section are checked for correct syntax and processed according to the instruction set. Fig. 3 shows sample code of a program for calculating the factorial of an input, and Fig.4 is the output for that code with comments explaining what instruction each line does. More detailed examples and process explanations can be found on our website.
 
-![Figure 3](https://github.com/user-attachments/assets/9d8180cb-0727-4b56-b3d3-d81e96e4ef31)
-
-![Figure 4](https://github.com/user-attachments/assets/dce10b19-6aa6-42bc-a831-00751ac2342d)
+![Figure 3 and 4](https://github.com/user-attachments/assets/dce10b19-6aa6-42bc-a831-00751ac2342d)
 
 Digital Logic Circuit Simulation
 NI Multisim was used to create the circuit design of the computer. TIL (technology independent logic) components were used when possible to keep our simulation free of analog factors. Hierarchical blocks were used for modularity. Fig. 5 demonstrates the computer memory design, including the circuit to upload assembled machine instructions. Fig. 6 shows the instruction and address mode selector of the instruction decoder.
