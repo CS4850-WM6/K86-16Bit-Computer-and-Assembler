@@ -1,0 +1,24 @@
+.data
+num1 48    # First number
+num2 18    # Second number
+gcd ?      # Result of GCD
+
+.code
+LOADM R1, num1   # Load num1 into R1
+LOADM R2, num2   # Load num2 into R2
+
+GCD_LOOP:
+    CMP R2, R0    # Compare R2 with 0
+    JZ DONE       # If R2 == 0, we're done
+
+    DIV R1, R2    # R1 / R2 (quotient stored in R1, remainder in flags)
+    LOADR R3, R1  # Move quotient to R3
+    MULT R3, R2   # Multiply quotient by divisor
+    SUB R1, R3    # R1 = R1 - (quotient * R2) (remainder stored in R1)
+    SWAP R1, R2   # Swap R1 and R2
+    JMP GCD_LOOP  # Repeat loop
+
+DONE:
+    STORE R1, gcd # Store result in memory
+    PRINT R1      # Print the GCD
+    HALT          # Stop execution
