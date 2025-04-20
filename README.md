@@ -26,8 +26,8 @@ The KASM assembler is written in Python and can process K86 code with two main 
 ![Figure 4](https://github.com/user-attachments/assets/dce10b19-6aa6-42bc-a831-00751ac2342d)
 
 Digital Logic Circuit Simulation
-NI Multisim was used to create the circuit design of the computer. TIL (technology independent logic) components were used when possible to keep our simulation free of analog factors. Hierarchical blocks were used for modularity. Fig. 5 demonstrates the computer memory design, including the circuit to upload assembly code. Fig. 6 shows the instruction and address mode selector of the instruction decoder.
+NI Multisim was used to create the circuit design of the computer. TIL (technology independent logic) components were used when possible to keep our simulation free of analog factors. Hierarchical blocks were used for modularity. Fig. 5 demonstrates the computer memory design, including the circuit to upload assembled machine instructions. Fig. 6 shows the instruction and address mode selector of the instruction decoder.
 
-![Figure 5](https://github.com/user-attachments/assets/7d4036de-da9e-4fb7-95c5-dc5bb3518f8f)
+![Figure 5](https://github.com/user-attachments/assets/f8fc3eb9-a69c-4623-85d7-f5aff4a42a34)
 
 ![Figure 6](https://github.com/user-attachments/assets/d92fa062-e183-4416-a417-a2d00d70faa4)
