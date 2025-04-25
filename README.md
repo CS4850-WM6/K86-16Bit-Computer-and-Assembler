@@ -1,8 +1,8 @@
-# K86 16Bit Computer and Assembler
+# K86 16-Bit Computer and Assembler
 
 This is a Multisim and Python implementation of a custom computer architecture design in 16-bit.
 
-With this project, we designed a general-purpose 16-bit RISC+CISC computer architecture, alongside an assembler, and instruction loader. Our computer architecture, K86 (Kennesaw 86), is inspired by the Intel x86 and ARM architectures that have enabled computing systems to perform many of the modern functionalities we rely on today. To allow for fluid programming and processing, KASM (Kennesaw Assembler) translates assembly code into machine instructions which will be stored in the computer memory by the loader. With all these components integrated together, our project defines much of the foundation of a sophisticated computing system.
+With this project, we designed a general-purpose 16-bit RISC+CISC computer architecture, alongside an assembler, and instruction loader. Our computer architecture, Kennesaw State 86 (K86), is inspired by the Intel x86 and ARM architectures that have enabled computing systems to perform many of the modern functionalities we rely on today. To allow for fluid programming and processing, the assembler translates Kennesaw State Assembly (KASM) code into machine instructions which will be stored in the computer memory by the loader. With all these components integrated together, our project defines much of the foundation of a sophisticated computing system.
 
 ## Project Overview
 
