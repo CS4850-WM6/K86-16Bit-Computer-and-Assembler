@@ -4,15 +4,19 @@ This is a Multisim and Python implementation of a custom computer architecture d
 
 With this project, we designed a general-purpose 16-bit RISC+CISC computer architecture, alongside an assembler, and instruction loader. Our computer architecture, Kennesaw State 86 (K86), is inspired by the Intel x86 and ARM architectures that have enabled computing systems to perform many of the modern functionalities we rely on today. To allow for fluid programming and processing, the assembler translates Kennesaw State Assembly (KASM) code into machine instructions which will be stored in the computer memory by the loader. With all these components integrated together, our project defines much of the foundation of a sophisticated computing system.
 
+![System Components](https://github.com/user-attachments/assets/4ee084a4-ba84-4c4e-8cff-4acd9a9a6bfd)
+
+*Figure 1: Project Components*
+
 ## Project Overview
 
 Our K86 hybrid RISC+CISC instruction set architecture (ISA) contains 61 different machine instructions capable of performing 6 different instruction types, including arithmetic, logic, branching, data movement, control flow, and I/O. RISC (Reduced Instruction Set Computer) design principles were incorporated with additional CISC (Complex ISC) instructions where useful. Escape codes and variable-length instructions were used to garner as much bandwidth as possible from our 16-bit instruction words, by adding both to the number of instructions and operand length.
 
 The hardware organization and architecture (Fig. 1) follows the Von Neumann model, meaning the control unit and ALU (Arithmetic-Logical Unit) are connected to a single memory bank through one bus. To improve upon the x86 architecture, we incorporated a bank of 16 different general-purpose registers for greater operand and address storage. A fully autonomous control unit, containing an instruction decoder and read-only special-purpose registers, runs continuous FDE (Fetch-Decode-Execute) cycles to process instructions.
 
-![Component Block Diagram](https://github.com/user-attachments/assets/6604c0a0-6570-4d54-9ffe-ade2aa0a14b1)
+![Architectural Block Diagram](https://github.com/user-attachments/assets/6604c0a0-6570-4d54-9ffe-ade2aa0a14b1)
 
-*Figure 1: Component Block Diagram*
+*Figure 2: Architectural Block Diagram*
 
 To make the computer usable, the KASM assembler translates K86 code into machine instructions which can be uploaded directly to the computer memory in the digital circuit simulation. These data are stored into the 8 KB memory in big endian format, then executed by the control unit with the click of a button. 
 
@@ -33,18 +37,18 @@ The KASM assembler is written in Python and can process K86 code with two main 
 
 ![KASM Programming](https://github.com/user-attachments/assets/dce10b19-6aa6-42bc-a831-00751ac2342d)
 
-*Figure 3: Factorial Program in KASM* *Figure 4: Resulting Binary Output*
+*Figure 4: Factorial Program in KASM* *Figure 5: Resulting Binary Output*
 
 ### Digital Logic Circuit Simulation
 NI Multisim was used to create the circuit design of the computer. TIL (technology independent logic) components were used when possible to keep our simulation free of analog factors. Hierarchical blocks were used for modularity. Two examples of our circuits are given below. Fig. 5 demonstrates the computer memory design, including the circuit to upload assembled machine instructions. Fig. 6 shows the instruction and address mode selector of the instruction decoder.
 
 ![Memory Unit](https://github.com/user-attachments/assets/f8fc3eb9-a69c-4623-85d7-f5aff4a42a34)
 
-*Figure 5: Memory Unit*
+*Figure 6: Memory Unit*
 
 ![Instruction Decoder](https://github.com/user-attachments/assets/d92fa062-e183-4416-a417-a2d00d70faa4)
 
-*Figure 6: Instruction and Addressing Selector*
+*Figure 7: Instruction and Addressing Selector*
 
 ## Setup
 
@@ -63,7 +67,7 @@ the instruction memory in order of arrival.
 
 ![Word Generator Upload](https://github.com/user-attachments/assets/d5a97a82-7a69-40bf-8d15-4560acec6287)
 
-*Figure 7: Inputting Instructions into Word Generator*
+*Figure 8: Inputting Instructions into Word Generator*
 
 3. Once in the instruction memory, the control unit will automatically execute the
 instructions until the instruction memory is empty. To view the execution results,
