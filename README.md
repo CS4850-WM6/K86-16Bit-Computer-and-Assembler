@@ -40,7 +40,9 @@ The KASM assembler is written in Python and can process KASM with two main sect
 
 ![KASM Programming](https://github.com/user-attachments/assets/dce10b19-6aa6-42bc-a831-00751ac2342d)
 
-*Figure 8: Factorial Program in KASM* *Figure 9: Resulting Binary Output*
+*Figure 8: Factorial Program in KASM*
+
+*Figure 9: Resulting Binary Output*
 
 ### Digital Logic Circuit Simulation
 NI Multisim was used to create the circuit design of the computer. TIL (technology independent logic) components were used when possible to keep our simulation free of analog factors. Hierarchical blocks were used for modularity. Two examples of our circuits are given below. Fig. 10 demonstrates the computer memory design, including the circuit to upload assembled machine instructions. Fig. 11 shows the instruction and address mode selector of the instruction decoder.
